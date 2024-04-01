@@ -1,0 +1,86 @@
+:root {
+  --bg-primary: #0d0d0d;
+  --text-primary: #ffffff94;
+  --text-secondary: #ffd900;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Sora Variable";
+  font-weight: 400;
+  background-color: var(--bg-primary);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 1.75em;
+}
+ul:not([role="list"]) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+button {
+  all: unset;
+  cursor: pointer;
+  user-select: none;
+}
+*[role="button"] {
+  color: white;
+  background-color: black;
+  padding: 8px 8px 8px 8px;
+  margin: 2em;
+  border-radius: 0.5em;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+*[role="button"]:hover {
+  background-color: white;
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+.accented {
+  color: var(--text-secondary);
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.important-text {
+  font-size: 20px;
+  letter-spacing: 8px;
+}
+.bold {
+  font-weight: bold;
+}
+.nav-arrow {
+  all: unset;
+  cursor: pointer;
+  animation: bounce 1s infinite;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}

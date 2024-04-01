@@ -1,0 +1,17 @@
+---
+interface Props {
+  id: string;
+  title?: string;
+  isLast?: boolean;
+  isFirst?: boolean;
+}
+
+const { title, id, isLast } = Astro.props;
+import ArrowDown from "../components/ArrowDown.astro";
+---
+
+<section id={id}>
+  {title && <h1>{title}</h1>}
+  <slot />
+  {!isLast && <ArrowDown />}
+</section>

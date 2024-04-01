@@ -1,0 +1,16 @@
+.modal-image {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.modal-image:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+@media only screen and (max-width: 640px) {
+  .modal-image {
+    width: calc(100% - 1em);
+    height: auto;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}

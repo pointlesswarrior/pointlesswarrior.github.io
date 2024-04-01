@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  src: string;
+  id: number;
+}
+
+const { src, title, description, id } = Astro.props;
+import { Image } from "astro:assets";
+import "../styles/modal-image.css";
+---
+
+<li>
+  <Image
+    class="modal-image"
+    src={src}
+    alt={title}
+    data-description={description}
+    width="400"
+    height="225"
+    id={String(id)}
+    loading="eager"
+    decoding="async"
+  />
+</li>

@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import "../styles/modal-viewer.css";
+---
+
+<div id="modal-viewer">
+  <span id="modal-viewer_close">&times;</span>
+  <div id="modal-viewer_content">
+    <Image src="/spinner.svg" alt="Loading..." width={640} height={360} />
+    <p id="modal-viewer_caption">Loading...</p>
+  </div>
+  <div id="modal-viever_arrows">
+    <button id="modal-viever_arrows-prev"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        width="36"
+        height="36"
+        viewBox="0 0 24 24"><path d="m12 19-7-7 7-7m7 7H5"></path></svg
+      ></button
+    >
+    <button id="modal-viever_arrows-next"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        width="36"
+        height="36"
+        viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"></path></svg
+      ></button
+    >
+  </div>
+</div>
+<script src="../scripts/modal.js"></script>

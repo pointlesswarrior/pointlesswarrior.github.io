@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import "@fontsource-variable/sora";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script
+      is:inline
+      src="//cdnjs.cloudflare.com/ajax/libs/scroll-lock/2.1.5/scroll-lock.min.js"
+      integrity="sha512-K5uD7Rt6SaJxFj+R7cqW7WGJQxOHmeNxIH/wX1P2JBOUWqRtt9ivDEq44C+ZpZgUgOGH/YIOA2ICLwXjImxGPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <div class="animation-wrapper">
+      <div class="particle particle-1"></div>
+    </div>
+
+    <slot />
+    <Footer />
+  </body>
+</html>

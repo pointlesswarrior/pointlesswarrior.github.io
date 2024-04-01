@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ModalImage from "../components/ModalImage.astro";
+import data from "../data.json";
+
+import "../styles/particles.scss";
+import ModalViewer from "../components/ModalViewer.astro";
+import Section from "../components/Section.astro";
+---
+
+<Layout title="adamkhalz's Portfolio - Creations">
+  <main>
+    <Section id="creations" isLast>
+      <ul class="modal-images">
+        {data.images.map((image, id) => <ModalImage {...image} id={id} />)}
+      </ul>
+    </Section>
+  </main>
+  <ModalViewer />
+</Layout>
+<style is:inline>
+  section {
+    min-height: 100vh;
+  }
+  #creations > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 0px;
+    justify-content: center;
+  }
+</style>

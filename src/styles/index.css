@@ -1,0 +1,148 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+section:not(:last-child) {
+  border-bottom: 1px solid var(--text-primary);
+}
+#avatar {
+  border-radius: 16px;
+}
+
+#me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#me #me-skills {
+  text-align: center;
+  display: block;
+}
+#me > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#me #me-description {
+  line-height: 30px;
+  width: 60%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 200;
+}
+#creations > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 0px;
+  justify-content: center;
+}
+#pricing > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 10px;
+}
+#creations > h1 {
+  padding-top: 12.5vh;
+}
+#pricing > h1 {
+  padding-top: 25vh;
+}
+#pricing > ul > li {
+  border: 1px solid var(--text-primary);
+  width: 400px;
+  height: 300px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 1em;
+  padding: 0.5em;
+}
+#pricing > ul > li > ul > li {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#pricing > ul > li > h2 {
+  margin: 0;
+}
+#contact-me > p {
+  font-size: 22px;
+  text-align: center;
+}
+#contact-me > ul {
+  border: 1px solid var(--text-primary);
+  width: 400px;
+  height: 133px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#contact-me > ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1280px) {
+  #pricing > ul {
+    flex-direction: column;
+    gap: 1em 0px;
+  }
+  #pricing .nav-arrow {
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  #me #me-description {
+    text-align: center;
+    width: 95%;
+    line-height: 22px;
+    font-size: 18px;
+  }
+  #creations .nav-arrow {
+    margin-top: 50px;
+  }
+  #pricing > ul > li {
+    padding: 4px;
+    width: 95%;
+  }
+  #contact-me > ul {
+    width: 95%;
+  }
+  #contact-me p {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-height: 640px) {
+  #avatar {
+    width: 175px;
+    height: auto;
+  }
+  #me #me-description {
+    width: 95%;
+    font-size: 20px;
+  }
+  #me > div {
+    gap: 12px 0px;
+  }
+}
+
+/* This is almost optional, but just in case */
+@media only screen and (max-height: 370px) {
+  #me #me-description {
+    margin: 0;
+  }
+}

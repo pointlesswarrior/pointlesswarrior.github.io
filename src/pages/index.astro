@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ModalImage from "../components/ModalImage.astro";
+import ModalViewer from "../components/ModalViewer.astro";
+import Section from "../components/Section.astro";
+import PricingCard from "../components/PricingCard.astro";
+import { Image } from "astro:assets";
+import data from "../data.json";
+import "../styles/index.css";
+import "../styles/particles.scss";
+import "@fontsource-variable/sora";
+const config = {
+  maxImages: 8,
+};
+const links = {
+  discord: ["/icons/discord.svg", "https://discord.gg/7YyJ7wF"],
+  twitter: ["/icons/twitter.svg", "https://twitter.com/aryxst"],
+  reddit: ["/icons/reddit.svg", "https://www.reddit.com/user/Aryxstocratic"],
+};
+---
+
+<Layout title="adamkhalz's Portfolio">
+  <main>
+    <Section id="me" isFirst>
+      <div>
+        <span id="me-skills" class="accented uppercase important-text bold"
+          >Builder and Map Designer</span
+        ><div>
+          <Image
+            src="//placehold.co/300x300"
+            id="avatar"
+            alt="My avatar"
+            width="300"
+            height="300"
+          />
+        </div><p id="me-description">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam,
+          assumenda sequi enim distinctio aliquid inventore alias quasi iste.
+        </p>
+      </div>
+    </Section>
+    <Section id="creations" title="Creations">
+      <ul class="modal-images">
+        {
+          data.images
+            .slice(0, config.maxImages)
+            .map((image, id) => <ModalImage {...image} id={id} />)
+        }
+      </ul>
+      {
+        config.maxImages < data.images.length && (
+          <a role="button" class="uppercase" href="/creations">
+            View More
+          </a>
+        )
+      }
+    </Section>
+    <Section id="pricing" title="Pricing"
+      ><ul>
+        {data.prices.map((plan) => <PricingCard {...plan} />)}
+      </ul></Section
+    >
+    <Section id="contact-me" title="Contact Me" isLast>
+      <p>Feel free to contact me via any of the following.</p>
+      <ul>
+        {
+          Object.keys(links).map((key) => {
+            const [icon, url] = links[key];
+            if (!url || !icon) return null;
+            return (
+              <li>
+                <a href={url}>
+                  <Image
+                    src={icon}
+                    alt={key}
+                    width="64"
+                    height="64"
+                    aria-label={`Go to ${key}`}
+                  />
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </Section>
+    <ModalViewer />
+  </main>
+</Layout>
+
+<script src="../scripts/navigate.js"></script>
