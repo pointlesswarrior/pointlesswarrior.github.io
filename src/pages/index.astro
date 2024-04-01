@@ -71,7 +71,11 @@ const links = {
               <li>
                 <a href={url}>
                   <Image
-                    src={icon}
+                    src={
+                      import.meta.env.DEV
+                        ? icon
+                        : import.meta.env.BASE_URL + icon
+                    }
                     alt={key}
                     width="64"
                     height="64"
