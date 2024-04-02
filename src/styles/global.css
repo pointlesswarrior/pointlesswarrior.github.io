@@ -39,6 +39,7 @@ button {
   user-select: none;
 }
 *[role="button"] {
+  font-size: 18px;
   color: white;
   background-color: black;
   padding: 8px 8px 8px 8px;
@@ -70,8 +71,7 @@ a {
   all: unset;
   cursor: pointer;
   animation: bounce 1s infinite;
-  margin-top: auto;
-  margin-bottom: 20px;
+  margin-bottom: auto;
 }
 @keyframes bounce {
   0%,

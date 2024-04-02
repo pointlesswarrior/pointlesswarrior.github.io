@@ -50,6 +50,9 @@ section:not(:last-child) {
   gap: 16px 0px;
   justify-content: center;
 }
+.nav-arrow {
+  margin-top: 50px;
+}
 #pricing > ul {
   display: flex;
   justify-content: center;
@@ -101,9 +104,6 @@ section:not(:last-child) {
     flex-direction: column;
     gap: 1em 0px;
   }
-  #pricing .nav-arrow {
-    margin-top: 50px;
-  }
 }
 @media only screen and (max-width: 640px) {
   #me #me-description {
@@ -113,7 +113,7 @@ section:not(:last-child) {
     font-size: 18px;
   }
   #creations .nav-arrow {
-    margin-top: 50px;
+    margin-top: 60px;
   }
   #pricing > ul > li {
     padding: 4px;
