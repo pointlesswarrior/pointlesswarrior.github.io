@@ -1,4 +1,16 @@
 {
+  "config": {
+    "maxImages": 8,
+    "contactMessage": "Feel free to contact me via any of the following.",
+    "skillText": "Builder and Map Designer",
+    "avatarURL": "//placehold.co/300x300",
+    "aboutText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam,assumenda sequi enim distinctio aliquid inventore alias quasi iste."
+  },
+  "links": {
+    "discord": ["/icons/discord.svg", "https://discord.gg/7YyJ7wF"],
+    "twitter": ["/icons/twitter.svg", "https://twitter.com/aryxst"],
+    "reddit": ["/icons/reddit.svg", "https://www.reddit.com/user/Aryxstocratic"]
+  },
   "images": [
     {
       "src": "https://tr.rbxcdn.com/97130ea2defeefebd38d79f626df1c3c/768/432/Image/Png",
@@ -32,18 +44,18 @@
     },
     {
       "src": "https://tr.rbxcdn.com/97130ea2defeefebd38d79f626df1c3c/768/432/Image/Png",
-      "title": "The Forest Thumbnail",
+      "title": "The Forest Thumbnail test 1231 sus",
       "description": "An open-world survival game set in a frozen wilderness, with players exploring, crafting, and fighting for survival."
     },
     {
       "src": "https://tr.rbxcdn.com/97130ea2defeefebd38d79f626df1c3c/768/432/Image/Png",
-      "title": "The Forest Thumbnail",
-      "description": "An open-world survival game set in a frozen wilderness, with players exploring, crafting, and fighting for survival."
+      "title": "The Forest Thumbnail 12313123123123",
+      "description": "A game set in a frozen wilderness, with players exploring, crafting."
     },
     {
       "src": "https://tr.rbxcdn.com/97130ea2defeefebd38d79f626df1c3c/768/432/Image/Png",
-      "title": "The Forest Thumbnail",
-      "description": "An open-world survival game set in a frozen wilderness, with players exploring, crafting, and fighting for survival."
+      "title": "The Forest Thumbnail dadadada",
+      "description": "With players exploring, crafting, and fighting for survival."
     }
   ],
   "prices": [

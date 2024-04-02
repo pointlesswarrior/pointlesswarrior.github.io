@@ -10,7 +10,11 @@ import Section from "../components/Section.astro";
 
 <Layout title="adamkhalz's Portfolio - Creations">
   <main>
-    <Section id="creations" isLast>
+    <Section
+      id="creations"
+      isLast
+      replace={{ href: import.meta.env.BASE_URL, text: "Go Back" }}
+    >
       <ul class="modal-images">
         {data.images.map((image, id) => <ModalImage {...image} id={id} />)}
       </ul>
@@ -22,10 +26,21 @@ import Section from "../components/Section.astro";
   section {
     min-height: 100vh;
   }
+  /* Center horizantally using margin */
+  .route-link {
+    display: block;
+    text-align: center;
+    max-width: fit-content;
+    margin-inline: auto;
+  }
   #creations > ul {
     display: flex;
     flex-wrap: wrap;
     gap: 16px 0px;
     justify-content: center;
+    margin-bottom: 2em;
+  }
+  footer {
+    margin-top: 2em;
   }
 </style>

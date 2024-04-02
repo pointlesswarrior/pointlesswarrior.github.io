@@ -6,7 +6,12 @@ import "../styles/modal-viewer.css";
 <div id="modal-viewer">
   <span id="modal-viewer_close">&times;</span>
   <div id="modal-viewer_content">
-    <Image src="/spinner.svg" alt="Loading..." width={640} height={360} />
+    <Image
+      src={`${import.meta.env.BASE_URL}/spinner.svg`}
+      alt="Loading..."
+      width={640}
+      height={360}
+    />
     <p id="modal-viewer_caption">Loading...</p>
   </div>
   <div id="modal-viever_arrows">

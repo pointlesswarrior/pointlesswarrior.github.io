@@ -24,19 +24,12 @@ modalClose.addEventListener("click", () => {
   scrollLock.enablePageScroll();
 });
 function loadImage(id) {
-  id =
-    id == -1
-      ? modalImages.length - 1
-      : +modalViewer.dataset.current == modalImages.length - 1
-      ? 0
-      : id;
+  id = id === modalImages.length ? 0 : id == -1 ? modalImages.length : id;
   const img = modalImages[id];
-  if (modalViewer.dataset.current == id) return;
-
+  modalViewer.dataset.current = id;
   modalCaption.innerHTML = `${img.alt}<br/><br/>${img.dataset.description}`;
   modalViewerImage.classList.add("fade-out-from-top");
   modalViewerImage.src = img.src;
-  modalViewer.dataset.current = id;
 }
 function loadNextImage() {
   loadImage(+modalViewer.dataset.current + 1);
@@ -48,6 +41,7 @@ function loadPreviousImage() {
 modalNext.addEventListener("click", loadNextImage);
 modalPrev.addEventListener("click", loadPreviousImage);
 document.addEventListener("keydown", function (event) {
+  if (!modalViewer.classList.contains("visible")) return;
   if (event.key === "ArrowRight") {
     loadNextImage();
   } else if (event.key === "ArrowLeft") {

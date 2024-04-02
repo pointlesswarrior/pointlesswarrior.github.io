@@ -13,10 +13,9 @@ import "@fontsource-variable/sora";
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
+    <meta name="description" content="Astro description" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#ffd900" />
     <meta name="author" content="Aryxst" />
@@ -29,25 +28,21 @@ import "@fontsource-variable/sora";
       name="description"
       content="lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, assumenda sequi enim distinctio aliquid inventore alias quasi iste."
     />
-    <meta property="title" content={title} />
-    <link rel="canonical" href={Astro.url.toString()} />
-    <!--     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" /> -->
-    <meta property="og:title" content={title} /><meta
-      property="og:site_name"
-      content={title}
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={import.meta.env.BASE_URL + "/favicon.svg"}
     />
+    <meta property="title" content={title} />
+    <meta property="og:title" content={title} />
+    <meta property="og:site_name" content={title} />
     <meta property="og:url" content={Astro.url.toString()} />
-    <!--     <meta
-      property="og:image"
-      content="https://aryxst.github.io/ropasses/android-chrome-512x512.png"
-    /> -->
     <meta
       property="og:description"
       content="lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, assumenda sequi enim distinctio aliquid inventore alias quasi iste."
     />
     <meta property="og:type" content="website" />
+    <link rel="canonical" href={Astro.url.toString()} />
     <script
       is:inline
       src="//cdnjs.cloudflare.com/ajax/libs/scroll-lock/2.1.5/scroll-lock.min.js"

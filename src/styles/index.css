@@ -41,7 +41,10 @@ section:not(:last-child) {
   font-size: 22px;
   font-weight: 200;
 }
-#creations > ul {
+#creations > h1 {
+  padding-top: 12.5vh;
+}
+#creations > div > ul {
   display: flex;
   flex-wrap: wrap;
   gap: 16px 0px;
@@ -52,9 +55,6 @@ section:not(:last-child) {
   justify-content: center;
   align-items: center;
   gap: 0px 10px;
-}
-#creations > h1 {
-  padding-top: 12.5vh;
 }
 #pricing > h1 {
   padding-top: 25vh;
