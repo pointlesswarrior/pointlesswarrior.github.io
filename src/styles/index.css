@@ -61,7 +61,7 @@ section:not(:last-child) {
 }
 #pricing > ul > li {
   border: 1px solid var(--text-primary);
-  width: 400px;
+  width: 375px;
   height: 300px;
   border-radius: 16px;
   display: flex;
