@@ -7,4 +7,6 @@ interface Props {
 const { text, href } = Astro.props;
 ---
 
-<a href={href} aria-label={text} role="button" class="route-link">{text}</a>
+<a href={href} aria-label={text} role="button" class="route-link uppercase"
+  >{text}</a
+>
