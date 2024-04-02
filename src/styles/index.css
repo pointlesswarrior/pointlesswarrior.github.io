@@ -126,6 +126,11 @@ section:not(:last-child) {
     font-size: 20px;
   }
 }
+@media only screen and (max-height: 800px) {
+  #me .nav-arrow {
+    margin-top: 1em;
+  }
+}
 @media only screen and (max-height: 640px) {
   #avatar {
     width: 175px;
