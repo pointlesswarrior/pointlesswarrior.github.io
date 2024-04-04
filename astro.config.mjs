@@ -8,6 +8,6 @@ export default defineConfig({
     port: 3000,
   },
   site: "https://aryxst.github.io",
-  base:"adamkhalz-portfolio",
+  base: "adamkhalz-portfolio",
   integrations: [sitemap()],
 });
