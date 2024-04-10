@@ -7,6 +7,7 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  site: "https://pointlesswarrior.github.io",
+  site: "https://aryxst.github.io",
+  base: "adamkhalz-portfolio",
   integrations: [sitemap()],
 });
