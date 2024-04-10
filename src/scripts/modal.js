@@ -24,7 +24,7 @@ modalClose.addEventListener("click", () => {
   scrollLock.enablePageScroll();
 });
 function loadImage(id) {
-  id = id === modalImages.length ? 0 : id == -1 ? modalImages.length : id;
+  id = id === modalImages.length ? 0 : id == -1 ? modalImages.length - 1 : id;
   const img = modalImages[id];
   modalViewer.dataset.current = id;
   modalCaption.innerHTML = `${img.alt}<br/><br/>${img.dataset.description}`;
